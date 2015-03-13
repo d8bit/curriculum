@@ -1,0 +1,5 @@
+@media (max-width: 685px) {
+  #notepad_content span {
+    font-size: 10px;
+  }
+}
