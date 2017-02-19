@@ -4,22 +4,22 @@
         <meta charset="UTF-8">
         <title>Currículum</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
     </head>
+
     <body>
 
         <div class="main">
             <section class="pag1">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-14 col-md-offset-1 console">
+                        <div class="col-md-14 col-md-offset-1 white-console">
                             <h1>CURRÍCULUM VITAE</h1>
                             <p class="console">
                             $_> David Oliva Llabrés<br />
-                            <span class="space"></span>> Contacto: <a href="mailto: david.oliva.llabres@gmail.com" >david.oliva.llabres@gmail.com</a><br />
-                            <span class="space"></span>> Palma de Mallorca, Baleares.<span class="blink">|</span>
+                            <span class="space"></span>> Contacto: <a href="mailto: david.oliva.llabres@gmail.com" >david.oliva.llabres@gmail.com</a><span class="blink">|</span><br />
+                            <span class="space"></span>> Palma de Mallorca, Baleares.
                             </p>
-                            <h2>ESTUDIOS</h2>
+                            <h2 class="console">ESTUDIOS</h2>
                             <p class="console">
                             $_> [2007-2012] Ingenieria Tecnica en Informatica de Gestión. Universidad Politécnica de Valencia.<br />
                             </p>
@@ -31,25 +31,25 @@
             <section class="pag2">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-14 col-md-offset-1 console">
-                            <h2 class="green">CONOCIMIENTOS</h2>
-                            <p>
+                        <div class="col-md-14 col-md-offset-1 green-console">
+                            <h2 class="console green">CONOCIMIENTOS</h2>
+                            <p class="console">
                             $_@SistemasOperativos > OSX, Linux, MacOS<br />
                             $_@Otros > API Rest, Gitflow, Apache, Grunt, Gulp, PHPUnit<br />
                             </p>
                             <div class="graph">
-                                <div class="knowledge"> <div class="knowledge-name green">PHP</div><div class="level advanced"></div><br /> </div>
-                                <div class="knowledge"> <div class="knowledge-name green">MYSQL</div><div class="level advanced"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name green">Laravel</div><div class="level advanced"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name green">Git</div><div class="level advanced"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name green">Javascript</div><div class="level medium"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name green">CodeIgniter</div><div class="level medium"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name green">Bootstrap</div><div class="level medium"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name green">Sass</div><div class="level basic"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name green">Subversion</div><div class="level basic"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name green">Python</div><div class="level basic"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name green">Java</div><div class="level basic"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name green">C#</div><div class="level basic"></div> </div>
+                                <div class="knowledge"> <div class="knowledge-name"><span class="green">PHP</span></div><div class="level advanced"></div><br /> </div>
+                                <div class="knowledge"> <div class="knowledge-name"><span class="green">MYSQL</span></div><div class="level advanced"></div> </div>
+                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Laravel</span></div><div class="level advanced"></div> </div>
+                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Git</span></div><div class="level advanced"></div> </div>
+                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Javascript</span></div><div class="level medium"></div> </div>
+                                <div class="knowledge"> <div class="knowledge-name"><span class="green">CodeIgniter</span></div><div class="level medium"></div> </div>
+                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Bootstrap</span></div><div class="level medium"></div> </div>
+                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Sass</span></div><div class="level basic"></div> </div>
+                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Subversion</span></div><div class="level basic"></div> </div>
+                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Python</span></div><div class="level basic"></div> </div>
+                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Java</span></div><div class="level basic"></div> </div>
+                                <div class="knowledge"> <div class="knowledge-name"><span class="green">C#</span></div><div class="level basic"></div> </div>
                             </div>
                         </div>
                     </div>
@@ -98,14 +98,15 @@
             </section>
         </div>
 
-        <link rel="stylesheet" href="onepage-scroll/onepage-scroll.css">
+
         <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="onepage-scroll/onepage-scroll.css">
+        <link rel="stylesheet" href="dist/style.css">
+
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="onepage-scroll/jquery.onepage-scroll.min.js"></script>
 
         <script src="bootstrap/bootstrap.min.js"></script>
-
         <script>
             $(".main").onepage_scroll({
                 sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
@@ -118,7 +119,7 @@
                 afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
                 loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
                 keyboard: true,                  // You can activate the keyboard controls
-                responsiveFallback: false        // You can fallback to normal page scroll by defining the width of the browser in which
+                responsiveFallback: 600        // You can fallback to normal page scroll by defining the width of the browser in which
                 // you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
                 // the browser's width is less than 600, the fallback will kick in.
             });
@@ -133,9 +134,9 @@
 
             function resizeDiv() {
                 var new_size = $(this).height();
-                $('.green-console').height(new_size - 80);
                 $('.notepad_content').height(new_size - 120);
             }
+
         </script>
 
     </body>
