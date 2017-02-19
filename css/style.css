@@ -26,6 +26,11 @@ h1 {
   height: 40px;
 }
 
+.space {
+    margin-left: 16px;
+    display: inline-block;
+}
+
 .console {
   border: 2px solid #ccc;
   height: 100%;
