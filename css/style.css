@@ -30,7 +30,7 @@ p, h1, h2{
 .console {
     border: 2px solid #ccc;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .green {
