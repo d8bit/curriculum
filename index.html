@@ -124,6 +124,20 @@
                 // you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
                 // the browser's width is less than 600, the fallback will kick in.
             });
+
+            $(window).resize(function() {
+                resizeDiv();
+            });
+
+            window.onload = function() {
+                resizeDiv();
+            }
+
+            function resizeDiv() {
+                var new_size = $(this).height();
+                $('.green-console').height(new_size - 80);
+                $('.notepad_content').height(new_size - 120);
+            }
         </script>
 
     </body>
