@@ -30,6 +30,7 @@ p, h1, h2{
 .console {
     border: 2px solid #ccc;
     height: 100%;
+    overflow-y: scroll;
 }
 
 .green {
@@ -135,8 +136,9 @@ p, h1, h2{
     padding: 10px;
     border-right: 1px solid #bdbdbd;
     border-left: 1px solid #bdbdbd;
-    height: 70%;
+    height: 400px;
     background: #fff;
+    overflow-y: scroll;
 }
 
 .notepad_content h2 {
