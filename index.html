@@ -58,7 +58,7 @@
 
             <section class="experience-page">
                 <div class="container-fluid">
-                    <img style="position: absolute;" src="img/mycomputer.jpg" alt="mycomputer"><br />
+                    <img id="computer-img" src="img/mycomputer.jpg" alt="mycomputer" class="computer-img" style="position: absolute;"><br />
                     <div class="row notepad">
                         <div class="col-md-12 col-md-offset-3" style="padding: 0;">
                             <div class="notepad_title" ><img id="nt" src="img/notepad-title.png" alt=""><img id="nb" src="img/notepad-buttons.png" alt=""></div>
@@ -145,6 +145,14 @@
             window.onload = function() {
                 resizeDiv();
             }
+
+            $("#computer-img").on("click", function() {
+                if (false === $("#computer-img").hasClass("clicked")) {
+                    $("#computer-img").addClass("clicked");
+                } else {
+                    $("#computer-img").removeClass("clicked");
+                }
+            });
 
             function resizeDiv() {
                 var new_size = $(this).height();
