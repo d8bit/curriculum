@@ -9,7 +9,7 @@
     <body>
 
         <div class="main">
-            <section class="pag1">
+            <section class="contact-page">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-14 col-md-offset-1 white-console">
@@ -28,14 +28,14 @@
                 </div>
             </section>
 
-            <section class="pag2">
+            <section class="knowledge-page">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-14 col-md-offset-1 green-console">
                             <h2 class="console green">CONOCIMIENTOS</h2>
                             <p class="console">
                             $_@SistemasOperativos > OSX, Linux, MacOS<br />
-                            $_@Otros > API Rest, Gitflow, Apache, Grunt, Gulp, PHPUnit<br />
+                            $_@Otros > API Rest, Gitflow, Apache, Grunt, Gulp, PHPUnit<span class="blink">|</span><br />
                             </p>
                             <div class="graph">
                                 <div class="knowledge"> <div class="knowledge-name"><span class="green">PHP</span></div><div class="level advanced"></div><br /> </div>
@@ -56,14 +56,14 @@
                 </div>
             </section>
 
-            <section class="pag3">
+            <section class="experience-page">
                 <div class="container-fluid">
                     <img style="position: absolute;" src="img/mycomputer.jpg" alt="mycomputer"><br />
                     <div class="row notepad">
                         <div class="col-md-12 col-md-offset-3" style="padding: 0;">
                             <div class="notepad_title" ><img id="nt" src="img/notepad-title.png" alt=""><img id="nb" src="img/notepad-buttons.png" alt=""></div>
                             <div class="notepad_menu" ><img id="nm" src="img/notepad-menu.png" alt=""></div>
-                            <div class="notepad_content" >
+                            <div class="notepad_content editable" contenteditable="true" >
                                 <h2>EXPERIENCIA LABORAL</h2>
                                 <p><strong>Nov. 2015-Act. RefineríaWeb. Palma de Mallorca.</strong><br />
                                  Desarrollo de aplicaciones en php, javascript, ajax, jquery, css y html.<br />
@@ -114,14 +114,21 @@
                 // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
                 animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
                 pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-                updateURL: true,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+                updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
                 beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
                 afterMove: function(index) {
-                    let secondPageIndex = 2;
-                    if (secondPageIndex == index) {
-                        if (false === $(".level").hasClass('loaded')) {
-                            $(".level").addClass('loaded');
-                        }
+                    let knowledgeIndex = 2;
+                    let experienceIndex = 3;
+                    switch (index) {
+                        case knowledgeIndex:
+                            if (false === $(".level").hasClass('loaded')) {
+                                $(".level").addClass('loaded');
+                            }
+                            $('.knoledge-page .editable').focus();
+                            break;
+                        case experienceIndex:
+                            $(".editable").focus();
+                            break;
                     }
                 },   // This option accepts a callback function. The function will be called after the page moves.
                 loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.

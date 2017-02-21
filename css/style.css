@@ -40,38 +40,38 @@ h1, h2.console, p.console, span {
     color: #27ad00;
 }
 
-.pag1 {
+.contact-page {
     background: #000;
 }
 
-.pag1 p {
+.contact-page p {
     font-size: 20px;
     color: #fff;
 }
 
-.pag1 a:hover {
+.contact-page a:hover {
     color: #B4E0FD;
 }
 
-.pag2 {
+.knowledge-page {
     background: #000;
     color: #000;
 }
 
-.pag2 h1 {
+.knowledge-page h1 {
     color: #27ad00;
 }
 
-.pag2 p {
+.knowledge-page p {
     font-size: 20px;
     color: #27ad00;
 }
 
-.pag2 a {
+.knowledge-page a {
     color: #F82929;
 }
 
-.pag2 a:hover {
+.knowledge-page a:hover {
     color: #FA6969;
 }
 
@@ -81,11 +81,11 @@ h1, h2.console, p.console, span {
     overflow-y: auto;
 }
 
-.pag3 {
+.experience-page {
     background-color: #007b7b;
 }
 
-.pag3 p {
+.experience-page p {
     font-family: arial;
     font-size: 20px;
     color: #000;
@@ -204,4 +204,7 @@ div.knowledge-name {
     width: 75%;
 }
 
+.editable {
+    outline: 0;
+}
 
