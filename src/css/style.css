@@ -216,7 +216,18 @@ div.knowledge-name {
     outline: 0;
 }
 
-.computer-img.clicked {
+.icon.clicked {
     filter: grayscale(100%);
+}
+
+.github-link {
+    position: absolute;
+    top: 90px;
+}
+
+.github-link span{
+    position: relative;
+    top: 18px;
+    left: 5px;
 }
 

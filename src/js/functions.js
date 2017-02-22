@@ -36,14 +36,15 @@ window.addEventListener("load", function() {
 
 
 
-    $("#computer-img").on("click", function() {
-        if (false === $("#computer-img").hasClass("clicked")) {
-            $("#computer-img").addClass("clicked");
-        } else {
-            $("#computer-img").removeClass("clicked");
-        }
-    });
     checkLevels();
+});
+
+$(".icon").on("click", function() {
+    if (false === $(this).hasClass("clicked")) {
+        $(this).addClass("clicked");
+    } else {
+        $(this).removeClass("clicked");
+    }
 });
 
 
