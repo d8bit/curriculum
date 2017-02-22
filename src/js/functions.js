@@ -24,12 +24,15 @@ $(".main").onepage_scroll({
     keyboard: true,
     responsiveFallback: 600
 });
-one_page = true;
+
 resizeDiv();
 
 $(window).resize(function() {
     resizeDiv();
+    checkLevels();
 });
+
+
 
 $("#computer-img").on("click", function() {
     if (false === $("#computer-img").hasClass("clicked")) {
@@ -39,8 +42,22 @@ $("#computer-img").on("click", function() {
     }
 });
 
+window.addEventListener("load", function() {
+    checkLevels();
+});
+
 
 function resizeDiv() {
     var new_size = $(this).height();
     $('.notepad_content').height(new_size - 120);
+}
+
+function checkLevels()
+{
+    var window_width = $(window).width();
+    if (600 >= window_width) {
+        if (false === $(".level").hasClass('loaded')) {
+            $(".level").addClass('loaded');
+        }
+    }
 }

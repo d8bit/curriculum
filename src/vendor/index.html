@@ -1,0 +1,50 @@
+<!doctype html><html lang="es"><head><meta charset="UTF-8"><title>Currículum</title><meta name="viewport" content="width=device-width,initial-scale=1"></head><body><div class="main"><section class="contact-page"><div class="container-fluid"><div class="row"><div class="col-md-14 col-md-offset-1 white-console"><h1>CURRÍCULUM VITAE</h1><p class="console">$_> David Oliva Llabrés<br><span class="space"></span>> Contacto: <a href="mailto: david.oliva.llabres@gmail.com">david.oliva.llabres@gmail.com</a><span class="blink">|</span><br><span class="space"></span>> Palma de Mallorca, Baleares.</p><h2 class="console">ESTUDIOS</h2><p class="console">$_> [2007-2012] Ingenieria Tecnica en Informatica de Gestión. Universidad Politécnica de Valencia.<br></p></div></div></div></section><section class="knowledge-page"><div class="container-fluid"><div class="row"><div class="col-md-14 col-md-offset-1 green-console"><h2 class="console green">CONOCIMIENTOS</h2><p class="console">$_@SistemasOperativos > OSX, Linux, MacOS<br>$_@Otros > API Rest, Gitflow, Apache, Grunt, Gulp, PHPUnit<span class="blink">|</span><br></p><div class="graph"><div class="knowledge"><div class="knowledge-name"><span class="green">PHP</span></div><div class="level advanced"></div><br></div><div class="knowledge"><div class="knowledge-name"><span class="green">MYSQL</span></div><div class="level advanced"></div></div><div class="knowledge"><div class="knowledge-name"><span class="green">Laravel</span></div><div class="level advanced"></div></div><div class="knowledge"><div class="knowledge-name"><span class="green">Git</span></div><div class="level advanced"></div></div><div class="knowledge"><div class="knowledge-name"><span class="green">Javascript</span></div><div class="level medium"></div></div><div class="knowledge"><div class="knowledge-name"><span class="green">CodeIgniter</span></div><div class="level medium"></div></div><div class="knowledge"><div class="knowledge-name"><span class="green">Bootstrap</span></div><div class="level medium"></div></div><div class="knowledge"><div class="knowledge-name"><span class="green">Sass</span></div><div class="level basic"></div></div><div class="knowledge"><div class="knowledge-name"><span class="green">Subversion</span></div><div class="level basic"></div></div><div class="knowledge"><div class="knowledge-name"><span class="green">Python</span></div><div class="level basic"></div></div><div class="knowledge"><div class="knowledge-name"><span class="green">Java</span></div><div class="level basic"></div></div><div class="knowledge"><div class="knowledge-name"><span class="green">C#</span></div><div class="level basic"></div></div></div></div></div></div></section><section class="experience-page"><div class="container-fluid"><img id="computer-img" src="img/mycomputer.jpg" alt="mycomputer" class="computer-img" style="position: absolute"><br><div class="row notepad"><div class="col-md-12 col-md-offset-3" style="padding: 0"><div class="notepad_title"><img id="nt" src="img/notepad-title.png" alt=""><img id="nb" src="img/notepad-buttons.png" alt=""></div><div class="notepad_menu"><img id="nm" src="img/notepad-menu.png" alt=""></div><div class="notepad_content editable" contenteditable="true"><h2>EXPERIENCIA LABORAL</h2><p><strong>Nov. 2015-Act. RefineríaWeb. Palma de Mallorca.</strong><br>Desarrollo de aplicaciones en php, javascript, ajax, jquery, css y html.<br>Uso de framework PHP Laravel, MYSQL, Gitflow y PHPUnit.<br></p><p><strong>Jul. 2015-Nov. 2015. Microvalencia. Palma de Mallorca.</strong><br>Desarrollo de aplicaciones en php, javascript, ajax, jquery, css y html.<br>Uso de framework PHP Laravel y CodeIgniter, MYSQL, Git y Subversion.<br></p><p><strong>Jul. 2014-Jul. 2015. Ivnosys. Valencia.</strong><br>Desarrollo de aplicaciones en php, javascript, ajax, jquery, css y html.<br></p><p><strong>2014-2015. PiscolabisWeb.</strong><br>Proyecto personal ,junto a una diseñadora, de programación y diseño web.<br></p><p><strong>Oct. 2011-Jul. 2014. Microvalencia. Valencia.</strong><br>Desarrollo de aplicaciones en php, javascript, ajax, jquery, css y html.<br>Uso de framework PHP Laravel y CodeIgniter, MYSQL, Git y Subversion.<br></p><p><strong>2007-2010 Tourline Express. Valencia.</strong><br>Mensajero.<br>Reparto en motocicleta de paquetería.<br></p><p><strong>2006-2007 Decathlon. Palma de Mallorca.</strong><br>Vendedor.<br></p></div><div class="notepad_footer"><img class="left" src="img/bottom_left.png" alt="left"><img class="right" src="img/bottom_right.png" alt="right"></div></div></div></div></section></div><link rel="stylesheet" href="bootstrap/bootstrap.min.css"><link rel="stylesheet" href="onepage-scroll/onepage-scroll.css"><link rel="stylesheet" href="dist/style.css"><script src="jquery/jquery-3.1.1.min.js"></script><script src="onepage-scroll/jquery.onepage-scroll.min.js"></script><script src="bootstrap/bootstrap.min.js"></script><script>$(".main").onepage_scroll({
+                sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+                easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", 
+                // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+                animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+                pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+                updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+                beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+                afterMove: function(index) {
+                    let knowledgeIndex = 2;
+                    let experienceIndex = 3;
+                    switch (index) {
+                        case knowledgeIndex:
+                            if (false === $(".level").hasClass('loaded')) {
+                                $(".level").addClass('loaded');
+                            }
+                            $('.knoledge-page .editable').focus();
+                            break;
+                        case experienceIndex:
+                            $(".editable").focus();
+                            break;
+                    }
+                },   // This option accepts a callback function. The function will be called after the page moves.
+                loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+                keyboard: true,                  // You can activate the keyboard controls
+                responsiveFallback: 600        // You can fallback to normal page scroll by defining the width of the browser in which
+                // you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
+                // the browser's width is less than 600, the fallback will kick in.
+            });
+
+            $(window).resize(function() {
+                resizeDiv();
+            });
+
+            window.onload = function() {
+                resizeDiv();
+            }
+
+            $("#computer-img").on("click", function() {
+                if (false === $("#computer-img").hasClass("clicked")) {
+                    $("#computer-img").addClass("clicked");
+                } else {
+                    $("#computer-img").removeClass("clicked");
+                }
+            });
+
+            function resizeDiv() {
+                var new_size = $(this).height();
+                $('.notepad_content').height(new_size - 120);
+            }</script></body></html>
