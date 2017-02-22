@@ -1,0 +1,31 @@
+{
+  "name": "curriculum",
+  "version": "1.0.0",
+  "description": "Website with my curriculum",
+  "main": "index.html",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify": "^0.0.15",
+    "gulp-uglify": "^2.0.1",
+    "pump": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sickboy83/curriculum.git"
+  },
+  "keywords": ["D8bit", "Curriculum", "David Oliva"],
+  "author": "David Oliva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sickboy83/curriculum/issues"
+  },
+  "homepage": "https://github.com/sickboy83/curriculum#readme"
+}
