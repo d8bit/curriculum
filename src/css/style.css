@@ -12,7 +12,7 @@
     padding: 40px 0;
 }
 
-.row.notepad {
+.row.notepad > div {
     padding: 0;
 }
 
@@ -214,6 +214,10 @@ div.knowledge-name {
 
 .editable {
     outline: 0;
+}
+
+.icon {
+    position: absolute;
 }
 
 .icon.clicked {
