@@ -193,7 +193,7 @@ div.knowledge-name {
     margin: 0;
     padding: 0;
     width: 1%;
-    transition: width 0.5s;
+    transition: width 1s;
 }
 
 .level.basic.loaded {
