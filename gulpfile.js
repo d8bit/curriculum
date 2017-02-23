@@ -14,6 +14,8 @@ gulp.task('default', function() {
     gulp.src(['src/img/**/*']).pipe(gulp.dest('dist/img'));
     // copy fonts folder
     gulp.src(['src/fonts/**/*']).pipe(gulp.dest('dist/fonts'));
+    // copy other files
+    gulp.src(['src/.htaccess', 'src/sitemap.xml', 'robots.txt']).pipe(gulp.dest('dist'));
 });
 
 gulp.task('minify-css', function() {
