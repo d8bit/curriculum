@@ -8,13 +8,17 @@ var gulp = require('gulp'),
 
 gulp.task('default', function() {
     livereload.reload();
+    // copy vendor folder
+    gulp.src(['src/vendor/**/*']).pipe(gulp.dest('dist/vendor'));
+    // copy img folder
+    gulp.src(['src/img/**/*']).pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('minify-css', function() {
     return gulp.src('src/**/*.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(concat('style.min.css'))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('minify-html', function() {
@@ -34,7 +38,7 @@ gulp.task('compress', function() {
             exclude: ['tasks'],
             ignoreFiles: ['.combo.js', '-min.js']
         }))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist/js'));
 
 });
 
