@@ -12,6 +12,10 @@ gulp.task('default', function() {
     gulp.src(['src/vendor/**/*']).pipe(gulp.dest('dist/vendor'));
     // copy img folder
     gulp.src(['src/img/**/*']).pipe(gulp.dest('dist/img'));
+    // copy fonts folder
+    gulp.src(['src/fonts/**/*']).pipe(gulp.dest('dist/fonts'));
+    // copy other files
+    gulp.src(['src/.htacces', 'src/robots.txt', 'src/sitemap.xml']).pipe(gulp.dest('dist/'));
 });
 
 gulp.task('minify-css', function() {
