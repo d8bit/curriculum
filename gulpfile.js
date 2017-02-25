@@ -4,10 +4,22 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     concat = require('gulp-concat'),
     htmlmin = require('gulp-htmlmin'),
-    minify = require('gulp-minify');
+    minify = require('gulp-minify'),
+    purify = require('gulp-purifycss'),
+    sourcemap = require('gulp-sourcemaps');
 
-gulp.task('default', function() {
-    livereload.reload();
+gulp.task('all', [
+    'move-files',
+    'purify-css',
+    'minify-css',
+    'minify-html',
+    'minify-js'
+]);
+
+gulp.task('default', ['watch']);
+
+
+gulp.task('move-files', function(){
     // copy vendor folder
     gulp.src(['src/vendor/**/*']).pipe(gulp.dest('dist/vendor'));
     // copy img folder
@@ -20,9 +32,19 @@ gulp.task('default', function() {
 
 gulp.task('minify-css', function() {
     return gulp.src('src/**/*.css')
-        .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(concat('style.min.css'))
+        .pipe(sourcemap.init())
+            .pipe(purify(['src/vendor/**/*.js', 'src/js/*.js', 'src/*.html']))
+            .pipe(cleanCSS({compatibility: 'ie8'}))
+            .pipe(concat('style.min.css'))
+        .pipe(sourcemap.write('maps'))
         .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('purify-css', function() {
+    return gulp.src('dist/css/*.css')
+        .pipe(purify(['src/js/*.js', 'src/*.html']))
+        .pipe(gulp.dest('dist/css'));
+
 });
 
 gulp.task('minify-html', function() {
@@ -32,7 +54,7 @@ gulp.task('minify-html', function() {
 
 });
 
-gulp.task('compress', function() {
+gulp.task('minify-js', function() {
     gulp.src('src/js/*.js')
         .pipe(minify({
             ext:{
@@ -46,7 +68,14 @@ gulp.task('compress', function() {
 
 });
 
+gulp.task('livereload', function() {
+    livereload.reload();
+});
+
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch(['src/css/*.css', 'src/*.html', 'src/js/*.js'], ['default', 'minify-html', 'minify-css', 'compress']);
+    gulp.watch(
+        ['src/css/*.css', 'src/*.html', 'src/js/*.js'],
+        ['all', 'livereload']
+    );
 });
