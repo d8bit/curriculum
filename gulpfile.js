@@ -6,7 +6,13 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin'),
     minify = require('gulp-minify'),
     purify = require('gulp-purifycss'),
-    sourcemap = require('gulp-sourcemaps');
+    sourcemap = require('gulp-sourcemaps'),
+    autoprefixer = require('gulp-autoprefixer');
+
+
+var autoprefixerOptions = {
+    browsers: ['last 5 versions', '> 1%', 'Firefox ESR']
+};
 
 gulp.task('all', [
     'move-files',
@@ -35,6 +41,7 @@ gulp.task('minify-css', function() {
         .pipe(sourcemap.init())
             .pipe(purify(['src/vendor/**/*.js', 'src/js/*.js', 'src/*.html']))
             .pipe(cleanCSS({compatibility: 'ie8'}))
+            .pipe(autoprefixer(autoprefixerOptions))
             .pipe(concat('style.min.css'))
         .pipe(sourcemap.write('maps'))
         .pipe(gulp.dest('dist/css'));
