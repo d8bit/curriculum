@@ -80,9 +80,9 @@ gulp.task('livereload', function() {
 });
 
 gulp.task('watch', function() {
-    livereload.listen();
     gulp.watch(
         ['src/css/*.css', 'src/*.html', 'src/js/*.js'],
         ['all', 'livereload']
     );
+    livereload.listen();
 });
