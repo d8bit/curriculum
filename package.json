@@ -8,14 +8,14 @@
     "gulp-clean-css": "^3.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-livereload": "^3.8.1",
+    "gulp-livereload": "^4.0.2",
     "gulp-minify": "^0.0.15",
     "gulp-uglify": "^2.0.1",
     "pump": "^1.0.2"
   },
   "devDependencies": {
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-livereload": "^3.8.1",
+    "gulp-livereload": "^4.0.2",
     "gulp-purifycss": "^0.2.0",
     "gulp-sourcemaps": "^2.4.1"
   },
