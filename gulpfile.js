@@ -14,17 +14,6 @@ var autoprefixerOptions = {
     browsers: ['last 5 versions', '> 1%', 'Firefox ESR']
 };
 
-gulp.task('all', [
-    'move-files',
-    'purify-css',
-    'minify-css',
-    'minify-html',
-    'minify-js'
-]);
-
-gulp.task('default', ['watch']);
-
-
 gulp.task('move-files', function(){
     // copy vendor folder
     gulp.src(['src/vendor/**/*']).pipe(gulp.dest('dist/vendor'));
@@ -33,7 +22,7 @@ gulp.task('move-files', function(){
     // copy fonts folder
     gulp.src(['src/fonts/**/*']).pipe(gulp.dest('dist/fonts'));
     // copy other files
-    gulp.src(['src/.htacces', 'src/robots.txt', 'src/sitemap.xml']).pipe(gulp.dest('dist/'));
+    gulp.src(['src/index.html', 'src/.htaccess', 'src/robots.txt', 'src/sitemap.xml']).pipe(gulp.dest('dist/'));
 });
 
 gulp.task('minify-css', function() {
@@ -86,3 +75,26 @@ gulp.task('watch', function() {
     );
     livereload.listen();
 });
+
+gulp.task('default', gulp.series('watch'));
+
+gulp.task('all', gulp.series(
+    'move-files',
+    'purify-css',
+    'minify-css',
+    'minify-html',
+    'minify-js'
+));
+
+// gulp.task('all', function () {
+//     return new Promise(function (resolve, reject) {
+//         gulp.series(
+//             'move-files',
+//             'purify-css',
+//             'minify-css',
+//             'minify-html',
+//             'minify-js'
+//         )
+//         resolve();
+//     });
+// });
