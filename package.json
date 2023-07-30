@@ -4,20 +4,21 @@
   "description": "Website with my curriculum",
   "main": "index.html",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.0.2",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-livereload": "^3.8.1",
-    "gulp-minify": "^0.0.15",
-    "gulp-uglify": "^2.0.1",
-    "pump": "^1.0.2"
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-livereload": "^4.0.2",
+    "gulp-minify": "^3.1.0",
+    "gulp-uglify": "^3.0.2",
+    "pump": "^3.0.0",
+    "vinyl": "^3.0.0"
   },
   "devDependencies": {
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-livereload": "^3.8.1",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-livereload": "^4.0.2",
     "gulp-purifycss": "^0.2.0",
-    "gulp-sourcemaps": "^2.4.1"
+    "gulp-sourcemaps": "^3.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -36,5 +37,6 @@
   "bugs": {
     "url": "https://github.com/sickboy83/curriculum/issues"
   },
-  "homepage": "https://github.com/sickboy83/curriculum#readme"
+  "homepage": "https://github.com/sickboy83/curriculum#readme",
+  "browserList":[ "last 5 versions", "> 1%", "Firefox ESR"]
 }
