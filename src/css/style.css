@@ -218,6 +218,7 @@ div.knowledge-name {
 
 .icon {
     position: absolute;
+    width: 55px;
 }
 
 .icon.clicked {
