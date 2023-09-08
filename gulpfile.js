@@ -81,15 +81,21 @@ gulp.task('minify-js', function () {
 });
 
 gulp.task('livereload', function() {
-    livereload.reload();
+    return new Promise(function (resolve, reject) {
+        livereload.reload();
+        resolve();
+    });
 });
 
 gulp.task('watch', function() {
-    gulp.watch(
-        ['src/css/*.css', 'src/*.html', 'src/js/*.js'],
-        ['all', 'livereload']
-    );
-    livereload.listen();
+    return new Promise(function (resolve, reject) {
+        livereload.listen();
+        gulp.watch(
+            ['src/css/*.css', 'src/*.html', 'src/js/*.js'],
+            gulp.series('all')
+        );
+        resolve();
+    });
 });
 
 gulp.task('default', gulp.series('watch'));
