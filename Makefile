@@ -6,5 +6,3 @@ prod:
 stop:
 	docker container stop curriculum
 	docker rm curriculum
-test:
-	echo "test"
