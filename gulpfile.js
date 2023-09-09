@@ -1,6 +1,5 @@
 
 var gulp = require('gulp'),
-    livereload = require('gulp-livereload'),
     cleanCSS = require('gulp-clean-css'),
     concat = require('gulp-concat'),
     htmlmin = require('gulp-htmlmin'),
@@ -80,16 +79,8 @@ gulp.task('minify-js', function () {
     });
 });
 
-gulp.task('livereload', function() {
-    return new Promise(function (resolve, reject) {
-        livereload.reload();
-        resolve();
-    });
-});
-
 gulp.task('watch', function() {
     return new Promise(function (resolve, reject) {
-        livereload.listen();
         gulp.watch(
             ['src/css/*.css', 'src/*.html', 'src/js/*.js'],
             gulp.series('all')
