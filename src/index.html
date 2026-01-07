@@ -1,126 +1,35 @@
-<!doctype html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Currículum David Oliva</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Curriculum Vitae from David Oliva. Professional web developer from 2011, and also web developer in his free time." />
-        <meta name="keywords" content="web developer, David Oliva, Laravel, Javascript, PHP, programacion web, desarrollador web" />
-        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <link rel="manifest" href="img/site.webmanifest">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D8bit</title>
+    <style>
+          html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+          }
 
-    <body>
+          body {
+            display: flex;
+            justify-content: center; /* centra horizontalmente */
+            align-items: center;     /* centra verticalmente */
+            text-align: center;      /* centra el texto dentro del contenedor */
+            background-color: #f0f0f0; /* opcional: color de fondo */
+            font-family: Arial, sans-serif;
+          }
 
-        <div class="main">
-            <section class="contact-page">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-14 col-md-offset-1 white-console">
-                            <h1>CURRÍCULUM VITAE</h1>
-                            <p class="console">
-                                $_> David Oliva Llabrés<br />
-                                <span class="subitem">
-                                    > Contacto: <a id="contact" href="&#100;&#097;&#118;&#105;&#100;&#046;&#111;&#108;&#105;&#118;&#097;&#046;&#108;&#108;&#097;&#098;&#114;&#101;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">&#100;&#097;&#118;&#105;&#100;&#046;&#111;&#108;&#105;&#118;&#097;&#046;&#108;&#108;&#097;&#098;&#114;&#101;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a><span class="blink">|</span><br />
-                                </span>
-                                <span class="subitem">
-                                    > Github: <a target="_blank" href="https://www.github.com/d8bit">D8bit</a><br />
-                                </span>
-                                <span class="subitem">
-                                    > Palma de Mallorca, Baleares.
-                                </span>
-                            </p>
-                            <h2 class="console">FORMACIÓN</h2>
-                            <p class="console">
-                            $_> [2007-2012] Ingenieria Tecnica en Informatica de Gestión. Universidad Politécnica de Valencia.<br />
-                            $_> [2021] HashiCorp Certified: Terraform Associate.<br />
-                            $_> [2023] AWS Certified Solutions Architect – Associate.<br />
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          h1 {
+            font-size: 2rem; /* tamaño del texto */
+            color: #333;
+          }
+    </style>
 
-            <section class="knowledge-page">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-14 col-md-offset-1 green-console">
-                            <h2 class="console green">CONOCIMIENTOS</h2>
-                            <p class="console">
-                            $_@SistemasOperativos > Linux, OSX, Windows<br />
-                            $_@Otros > API Rest, Apache, Unit testing, Gitflow<span class="blink">|</span><br />
-                            </p>
-                            <div class="graph">
-                                <div class="knowledge"> <div class="knowledge-name"><span class="green">PHP</span></div><div class="level advanced"></div><br /> </div>
-                                <div class="knowledge"> <div class="knowledge-name"><span class="green">MYSQL</span></div><div class="level advanced"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Git</span></div><div class="level advanced"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Javascript</span></div><div class="level advanced"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name"><span class="green">AWS</span></div><div class="level medium-advanced"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Terraform</span></div><div class="level medium-advanced"></div><br /> </div>
-                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Docker</span></div><div class="level basic"></div> </div>
-                                <div class="knowledge"> <div class="knowledge-name"><span class="green">Python</span></div><div class="level basic"></div> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  </head>
 
-            <section class="experience-page">
-                <div class="container-fluid">
-                    <br />
-                    <span class="github-link">
-                        <a rel="nofollow" href="https://www.github.com/d8bit" target="_blank">
-                            <br />
-                            <span></span>
-                        </a>
-                    </span>
-                    <div class="row notepad">
-                        <div class="col-md-12 col-md-offset-3">
-                            <div class="notepad_title" ></div>
-                            <div class="notepad_menu" ></div>
-                            <div class="notepad_content editable" contenteditable="true" >
-                                <h2>EXPERIENCIA LABORAL</h2>
-                                <p><b>Nov. 2020-Act. Virtual Cave. Palma de Mallorca.</b><br />
-                                 CloudOps con AWS y Terraform. Scripting en Python y Javascript<br />
-                                 Desarrollo en PHP y dockerización de aplicaciones<br />
-                                </p>
-                                <p><b>Nov. 2015-Nov.2020. RefineríaWeb. Palma de Mallorca.</b><br />
-                                 Desarrollo de ERPs, API REST, ecommerce y CMS en PHP, Javascript, JQuery, CSS y HTML.<br />
-                                 Mantenimiento ocasional de CMS en Ruby y Python.<br />
-                                 Formaciones internas y responsable de buenas prácticas.<br />
-                                </p>
-                                <p><b>Jul. 2015-Nov. 2015. Microvalencia. Palma de Mallorca.</b><br />
-                                 Desarrollo de ERPs y ecommerce en PHP, Javascript, AJAX, JQuery, CSS y HTML.<br />
-                                 Uso de framework PHP Laravel y CodeIgniter, MYSQL, Git y Subversion.<br />
-                                </p>
-                                <p><b>Jul. 2014-Jul. 2015. Ivnosys. Valencia.</b><br />
-                                Mantenimiento y desarrollo de nuevas funcionalidades para plataforma de certificados digitales en PHP, Javascript, AJAX, JQuery, CSS y HTML. Uso de Subversion<br />
-                                </p>
-                                <p><b>2014-2015. PiscolabisWeb.</b><br />
-                                Proyecto personal, junto a una diseñadora gráfica, de realización de página web a medida y <i>branding</i>.<br />
-                                </p>
-                                <p><b>Oct. 2011-Jul. 2014. Microvalencia. Valencia.</b><br />
-                                 Desarrollo de ERPs y ecommerce en PHP, Javascript, AJAX, JQuery, CSS y HTML.<br />
-                                 Uso de framework PHP CodeIgniter, MYSQL y Subversion.<br />
-                                </p>
-                            </div>
-                            <div class="notepad_footer" ></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <link rel="stylesheet" href="css/style.min.css">
-
-        <script src="vendor/jquery/jquery-3.1.1.min.js"></script>
-        <script src="vendor/onepage-scroll/jquery.onepage-scroll.min.js"></script>
-        <script src="vendor/bootstrap/bootstrap.min.js"></script>
-
-        <script src="js/functions.js"></script>
-
-    </body>
+  <body>
+    <h1>Under contruction...or something :)</h1>
+  </body>
 
 </html>
