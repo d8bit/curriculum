@@ -1,5 +1,24 @@
 var gulp = require('gulp'),
-    fs = require('fs');
+    fs = require('fs'),
+    { minify } = require('html-minifier-terser'),
+    { Transform } = require('stream');
+
+function minifyHtmlTransform() {
+    return new Transform({
+        objectMode: true,
+        transform(file, _, cb) {
+            if (file.isBuffer()) {
+                minify(file.contents.toString(), { collapseWhitespace: true, removeComments: true })
+                    .then(function(result) {
+                        file.contents = Buffer.from(result);
+                        cb(null, file);
+                    });
+            } else {
+                cb(null, file);
+            }
+        }
+    });
+}
 
 gulp.task('clean-html', function(done) {
     try { fs.unlinkSync('dist/index.html'); } catch (e) {}
@@ -15,7 +34,7 @@ gulp.task('move-files', function() {
 });
 
 gulp.task('copy-html', function() {
-    return gulp.src('src/*.html').pipe(gulp.dest('dist'));
+    return gulp.src('src/*.html').pipe(minifyHtmlTransform()).pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function() {
