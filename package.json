@@ -4,7 +4,7 @@
   "description": "Website with my curriculum",
   "main": "index.html",
   "dependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.1",
     "gulp-htmlmin": "^5.0.1"
   },
   "scripts": {
