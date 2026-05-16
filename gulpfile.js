@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    htmlmin = require('gulp-htmlmin'),
     fs = require('fs');
 
 gulp.task('clean-html', function(done) {
@@ -15,13 +14,8 @@ gulp.task('move-files', function() {
     });
 });
 
-gulp.task('minify-html', function() {
-    return new Promise(function(resolve) {
-        gulp.src('src/*.html')
-            .pipe(htmlmin({ collapseWhitespace: true }))
-            .pipe(gulp.dest('dist'));
-        resolve();
-    });
+gulp.task('copy-html', function() {
+    return gulp.src('src/*.html').pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function() {
@@ -33,4 +27,4 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.series('watch'));
 
-gulp.task('all', gulp.series('clean-html', 'move-files', 'minify-html'));
+gulp.task('all', gulp.series('clean-html', 'move-files', 'copy-html'));
