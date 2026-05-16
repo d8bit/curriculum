@@ -49,4 +49,9 @@ Both mount `dist/` as the Apache document root, so any rebuild is reflected imme
 
 ## Deployment
 
-Deploy by copying the contents of `dist/` to the web server. The `dist/.htaccess` file is included in the build.
+Build first, then sync `dist/` to the S3 bucket:
+
+```bash
+make prod
+aws s3 sync dist/ s3://d8bit.com
+```
