@@ -8,7 +8,7 @@ Personal CV/portfolio website for David Oliva (D8bit). Live at [d8bit.com](http:
 
 ## Build system
 
-Gulp 4 pipeline: `src/` → `dist/`.
+Gulp 5 pipeline: `src/` → `dist/`.
 
 - **Install deps:** `npm install`
 - **Development:** `make dev` — starts an Apache Docker container serving `dist/` on port 8080, then runs `gulp watch` (rebuilds on HTML changes)

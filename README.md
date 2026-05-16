@@ -1,8 +1,8 @@
 ## Curriculum Vitae D8bit
 
-Personal CV/portfolio website for [David Oliva](http://www.d8bit.com), built with a Gulp 4 pipeline. The source lives in `src/` and the compiled output is served from `dist/`.
+Personal CV/portfolio website for [David Oliva](http://www.d8bit.com), built with a Gulp 5 pipeline. The source lives in `src/` and the compiled output is served from `dist/`.
 
-**Stack:** HTML, CSS, JavaScript — with Bootstrap, jQuery, and onepage-scroll as vendor libs. Uses a VT323 monospace font for the retro terminal aesthetic.
+**Stack:** Plain HTML with inline styles — no external CSS, JS, or vendor libs.
 
 ---
 
@@ -28,7 +28,7 @@ make stop
 
 ## Production build
 
-Runs the full Gulp pipeline (purify + minify CSS/HTML/JS, copy assets):
+Runs the full Gulp pipeline (copy assets + minify HTML):
 
 ```bash
 make prod

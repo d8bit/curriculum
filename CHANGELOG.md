@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2026-05-16
+
+### Added
+- HTML minification via `html-minifier-terser` (collapses whitespace, removes comments)
+
+### Changed
+- Updated README and CLAUDE.md to reflect current stack (plain HTML, no vendor libs, Gulp 5)
+
 ## [1.1.0] - 2026-05-16
 
 ### Fixed
