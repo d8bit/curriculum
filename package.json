@@ -4,7 +4,8 @@
   "description": "Website with my curriculum",
   "main": "index.html",
   "dependencies": {
-    "gulp": "^5.0.1"
+    "gulp": "^5.0.1",
+    "html-minifier-terser": "^7.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
