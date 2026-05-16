@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 gulp.task('move-files', function() {
     return new Promise(function(resolve) {
         gulp.src(['src/img/**/*']).pipe(gulp.dest('dist/img'));
-        gulp.src(['src/index.html', 'src/.htaccess', 'src/robots.txt', 'src/sitemap.xml']).pipe(gulp.dest('dist/'));
+        gulp.src(['src/robots.txt', 'src/sitemap.xml']).pipe(gulp.dest('dist/'));
         resolve();
     });
 });
